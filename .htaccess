@@ -1,0 +1,164 @@
+# FireWeb Messenger - Security & Routing (Premium UI v0.0.1)
+# Root: F:\Wamp\www\FireWebCHAT
+# Author: Alion (@prgpu / @Learn_launch)
+# License: MIT
+
+# ============================================
+# REWRITE ENGINE
+# ============================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /FireWebCHAT/
+    
+    # Force HTTPS in production (uncomment when ready)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ============================================
+# BLOCK DIRECT ACCESS TO SENSITIVE FILES
+# ============================================
+
+# Block database files
+<FilesMatch "^.*\.(db|sqlite|sqlite3)$">
+    Require all denied
+</FilesMatch>
+
+# Block config files
+<FilesMatch "^.*\.(ini|conf|config|env|lock)$">
+    Require all denied
+</FilesMatch>
+
+# Block log and backup files
+<FilesMatch "^.*\.(log|bak|backup|old|sql)$">
+    Require all denied
+</FilesMatch>
+
+# Block .htaccess itself
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# ============================================
+# BLOCK DIRECTORY ACCESS
+# ============================================
+
+# Block app/ directory (controllers, models, views)
+RedirectMatch 403 ^/FireWebCHAT/app/.*$
+
+# Block config/ directory
+RedirectMatch 403 ^/FireWebCHAT/config/.*$
+
+# Block storage/ directory (except via api.php)
+RedirectMatch 403 ^/FireWebCHAT/storage/.*$
+
+# ============================================
+# SECURITY HEADERS
+# ============================================
+<IfModule mod_headers.c>
+    # Clickjacking protection
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # XSS protection
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Referrer policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Remove server info
+    Header unset X-Powered-By
+    Header unset Server
+</IfModule>
+
+# ============================================
+# PWA SUPPORT
+# ============================================
+
+# Manifest.json with correct MIME
+<Files "manifest.json">
+    <IfModule mod_headers.c>
+        Header set Content-Type "application/manifest+json; charset=utf-8"
+        Header set Cache-Control "public, max-age=604800"
+    </IfModule>
+</Files>
+
+# Service worker (no cache)
+<Files "service-worker.js">
+    <IfModule mod_headers.c>
+        Header set Content-Type "application/javascript; charset=utf-8"
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Service-Worker-Allowed "/FireWebCHAT/"
+    </IfModule>
+</Files>
+
+# ============================================
+# COMPRESSION
+# ============================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE application/javascript application/json
+</IfModule>
+
+# ============================================
+# BROWSER CACHING
+# ============================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Images (1 year)
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    
+    # Fonts (1 year)
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    
+    # CSS & JavaScript (1 month)
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    
+    # Dynamic content (no cache)
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# ============================================
+# PREVENT DIRECTORY LISTING
+# ============================================
+Options -Indexes
+
+# ============================================
+# PHP SETTINGS
+# ============================================
+<IfModule mod_php7.c>
+    # Upload limits
+    php_value upload_max_filesize 20M
+    php_value post_max_size 20M
+    php_value max_execution_time 300
+    
+    # Memory
+    php_value memory_limit 256M
+    
+    # Hide errors (production)
+    php_flag display_errors Off
+    php_flag display_startup_errors Off
+    
+    # Session security
+    php_value session.cookie_httponly 1
+    php_value session.use_only_cookies 1
+</IfModule>
+
+# ============================================
+# ERROR PAGES
+# ============================================
+ErrorDocument 400 /FireWebCHAT/404.php
+ErrorDocument 401 /FireWebCHAT/404.php
+ErrorDocument 403 /FireWebCHAT/404.php
+ErrorDocument 404 /FireWebCHAT/404.php
+ErrorDocument 500 /FireWebCHAT/404.php
+ErrorDocument 503 /FireWebCHAT/404.php

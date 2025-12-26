@@ -1,0 +1,38 @@
+/**
+ * FireWeb Messenger - Persian Fonts (Premium UI v0.0.1)
+ * 
+ * @author Alion (@prgpu / @Learn_launch)
+ * @license MIT
+ */
+
+@font-face {
+    font-family: 'Kalameh';
+    src: url('fonts/Kalameh-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aviny';
+    src: url('fonts/aviny.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.persian-text {
+    font-family: 'Kalameh', 'Aviny', 'Tahoma', 'Arial', sans-serif;
+}
+
+.fa-text {
+    font-family: 'Aviny', 'Tahoma', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kalameh', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Kalameh', 'Aviny', sans-serif;
+}
