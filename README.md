@@ -84,6 +84,8 @@ Star ⭐ • Fork 🔱 • Pull Request 🚀 • Report Issues 🐛
 
 **Built with ❤️ for freedom of communication**
 
+**FIREWEBCHAT**
+
 🔥 *Keep the flame burning* 🔥
 
 <a href="https://github.com/PRGPU/FireWebCHAT/issues">🐛 Report Bug</a> • <a href="https://t.me/prgpu">💬 Telegram</a>
