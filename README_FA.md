@@ -44,8 +44,11 @@
 1. دانلود
 git clone https://github.com/PRGPU/FireWebCHAT.git
 
-2. آپلود روی سرور
-3. باز کن در مرورگر
+2. فایل‌های پروژه رو روی سرور آپلود کن.
+3. ابزار راه‌اندازی رو باز کن: https://firewebchat.vercel.app
+4. یا این ویدیو آموزشی رو ببین: https://youtu.be/Z_BUtrt-Trc
+5. در نهایت، آدرس FireWebChat خودت رو در مرورگر باز کن و Setup رو کامل کن.
+
 https://yourdomain.com/
 
 text
