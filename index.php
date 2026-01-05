@@ -1,2 +1,191 @@
 <?php
- goto aHoLu; aHoLu: echo "\74\x6c\151\x6e\x6b\x20\162\x65\154\75\42\x69\143\x6f\156\42\40\x68\x72\x65\x66\x3d\x22\141\x73\x73\x65\164\163\57\x69\x6d\141\x67\x65\163\57\x69\x63\157\156\x2d\x39\x36\x2e\160\x6e\x67\42\x20\x74\x79\x70\x65\75\x22\x69\155\141\147\x65\57\x70\156\x67\x22\x3e" . PHP_EOL; goto GQSS3; by3ad: ini_set("\163\x65\163\x73\151\157\x6e\x2e\147\x63\137\155\141\170\154\151\146\x65\x74\x69\x6d\x65", 86400); goto YqksP; YqksP: session_start(); goto LAtq4; WsD36: $requiresAuth = !in_array($route, $publicRoutes); goto IXSs_; yODhC: if (!in_array($route, $allowedRoutes)) { $route = "\150\157\155\x65"; } goto mveWE; eOUPA: spl_autoload_register(function ($class) { $paths = array(APP_PATH . "\57\143\x6f\x6e\x74\x72\157\154\154\145\x72\163\57" . $class . "\x2e\x70\x68\x70", APP_PATH . "\57\155\x6f\x64\x65\154\x73\57" . $class . "\56\160\x68\160", CONFIG_PATH . "\x2f" . $class . "\x2e\160\x68\160"); foreach ($paths as $path) { if (file_exists($path)) { require_once $path; return true; } } return false; }); goto FosDg; IXSs_: if ($requiresAuth && !isset($_SESSION["\165\x73\x65\x72\137\x69\144"])) { header("\114\157\143\x61\164\x69\157\x6e\x3a\40\77\162\x6f\x75\x74\145\75\154\x6f\x67\x69\156"); die; } goto B793O; ZQP8W: if (!$isInstalled && (!isset($_GET["\162\157\x75\164\x65"]) || $_GET["\x72\157\x75\164\x65"] !== "\x73\145\164\x75\160")) { header("\x4c\x6f\143\141\x74\x69\157\156\72\40\77\162\x6f\165\164\145\75\163\x65\164\165\x70"); die; } goto eOUPA; mMhuM: $isInstalled = file_exists($setupLockFile); goto ZQP8W; DDZIb: define("\101\123\123\105\124\123\137\120\101\x54\x48", BASE_PATH . "\x2f\x61\163\x73\x65\x74\x73"); goto ERqEY; LAtq4: define("\x42\x41\x53\x45\x5f\120\101\124\x48", __DIR__); goto nmgNN; nmgNN: define("\x43\x4f\116\x46\111\107\x5f\x50\101\124\x48", BASE_PATH . "\57\x63\x6f\156\x66\x69\147"); goto rGBAL; rGBAL: define("\101\120\120\137\x50\x41\x54\x48", BASE_PATH . "\57\141\160\x70"); goto ZhTRG; neQ_w: ini_set("\x73\x65\163\x73\151\x6f\x6e\x2e\143\x6f\157\153\x69\x65\x5f\x73\145\x63\165\162\x65", 0); goto H6R7Z; DPthN: ini_set("\x73\x65\163\163\151\x6f\x6e\x2e\x75\163\145\137\x73\164\x72\x69\x63\x74\137\155\x6f\144\x65", 1); goto by3ad; uwyck: if ($route === "\155\x61\156\x69\x66\x65\163\164") { header("\x43\x6f\156\164\145\156\x74\x2d\124\171\x70\x65\72\40\141\160\160\x6c\x69\143\141\x74\x69\157\x6e\57\x6a\x73\157\x6e\x3b\x20\x63\x68\141\162\x73\145\164\75\165\164\x66\x2d\70"); header("\x43\x61\143\150\145\55\x43\x6f\x6e\x74\x72\157\x6c\x3a\40\160\x75\x62\x6c\x69\143\x2c\40\x6d\141\x78\55\141\147\145\75\66\x30\x34\70\x30\60"); $manifestPath = BASE_PATH . "\57\155\x61\x6e\x69\x66\x65\x73\x74\56\152\x73\x6f\156"; if (file_exists($manifestPath)) { readfile($manifestPath); } else { http_response_code(404); echo json_encode(array("\145\x72\x72\x6f\162" => "\x4d\141\x6e\151\x66\145\x73\x74\40\x6e\x6f\164\40\x66\157\x75\x6e\144")); } die; } goto fNaUi; RkjKL: if ($route === null) { if ($isInstalled) { if (isset($_SESSION["\165\x73\x65\162\137\x69\144"])) { $route = "\x63\150\x61\164"; } else { $route = "\x68\x6f\x6d\145"; } } else { $route = "\x73\x65\164\165\x70"; } } goto uwyck; GQSS3: error_reporting(E_ALL); goto uDnU6; BpPNv: ini_set("\x6c\157\x67\x5f\x65\x72\x72\x6f\162\163", 1); goto jZA_M; B793O: if (in_array($route, array("\154\x6f\147\x69\x6e", "\162\x65\147\x69\x73\x74\145\x72")) && isset($_SESSION["\165\163\x65\x72\x5f\151\x64"])) { header("\x4c\x6f\143\141\164\x69\157\x6e\72\x20\77\x72\x6f\x75\164\x65\x3d\x63\x68\x61\x74"); die; } goto bJsSD; ERqEY: define("\x50\125\102\114\111\103\137\x50\101\x54\x48", BASE_PATH . "\57\x70\165\142\x6c\151\x63"); goto y3Wye; H6R7Z: ini_set("\163\x65\x73\163\151\157\156\x2e\x63\x6f\157\x6b\151\x65\x5f\163\141\155\x65\163\151\164\x65", "\x4c\x61\170"); goto DPthN; ZhTRG: define("\x53\124\x4f\x52\x41\x47\x45\x5f\x50\101\x54\110", BASE_PATH . "\x2f\x73\x74\157\162\x61\x67\145"); goto DDZIb; y3Wye: $setupLockFile = CONFIG_PATH . "\x2f\x73\x65\x74\165\x70\x2e\154\157\143\x6b"; goto mMhuM; uDnU6: ini_set("\144\x69\x73\x70\x6c\141\x79\137\x65\x72\162\x6f\x72\163", 0); goto BpPNv; fNaUi: if ($route === "\163\167") { header("\x43\x6f\x6e\x74\145\156\x74\x2d\x54\x79\x70\x65\x3a\x20\x61\x70\160\154\x69\143\x61\164\151\x6f\156\x2f\152\141\166\141\163\x63\162\151\160\x74\73\40\x63\x68\141\x72\163\145\x74\75\x75\164\x66\x2d\70"); header("\x43\141\143\x68\x65\x2d\x43\157\156\x74\162\157\x6c\x3a\x20\x6e\x6f\55\x63\141\x63\150\x65\x2c\40\156\x6f\x2d\x73\x74\157\162\x65\x2c\x20\x6d\165\163\164\55\162\x65\x76\x61\x6c\151\x64\x61\x74\x65"); header("\x53\145\162\166\151\143\x65\55\127\157\162\153\145\x72\55\x41\x6c\154\157\x77\145\x64\x3a\x20\57\106\151\162\x65\x57\145\x62\103\110\x41\124\x2f"); $swPath = BASE_PATH . "\57\x73\x65\x72\166\x69\143\x65\x2d\167\157\x72\x6b\145\x72\56\152\x73"; if (file_exists($swPath)) { readfile($swPath); } else { http_response_code(404); echo "\143\x6f\x6e\163\x6f\x6c\145\x2e\145\162\162\157\162\50\x22\x53\x65\162\x76\x69\x63\x65\x20\x77\157\x72\x6b\x65\x72\40\156\x6f\x74\40\x66\157\x75\156\144\x22\51\x3b"; } die; } goto i6IRs; mveWE: $publicRoutes = array("\x73\145\164\x75\x70", "\150\157\155\145", "\154\x6f\147\x69\x6e", "\162\145\x67\x69\163\x74\145\x72"); goto WsD36; Txycr: $route = $_GET["\x72\157\x75\164\x65"] ?? null; goto RkjKL; jZA_M: ini_set("\163\145\x73\x73\x69\x6f\x6e\56\x63\157\x6f\x6b\151\145\x5f\150\164\164\x70\x6f\156\154\171", 1); goto neQ_w; ObdxI: $allowedRoutes = array("\x73\145\x74\165\x70", "\x68\157\x6d\x65", "\154\157\147\x69\x6e", "\x72\145\x67\x69\x73\x74\x65\162", "\x63\x68\x61\x74", "\x61\x64\155\151\x6e", "\154\x6f\x67\157\165\164", "\160\x72\157\146\151\154\145"); goto yODhC; EdeH3: if ($isInstalled) { if (file_exists(CONFIG_PATH . "\57\x61\x70\x70\56\x70\x68\x70")) { $config = (require CONFIG_PATH . "\x2f\x61\x70\x70\x2e\160\150\160"); } } goto Txycr; i6IRs: if (isset($config["\155\141\151\156\164\145\156\141\156\143\x65\137\x6d\x6f\x64\145"]) && $config["\x6d\x61\151\x6e\x74\145\x6e\141\x6e\143\145\137\155\157\144\145"] === true) { if (!isset($_SESSION["\165\x73\x65\x72\137\151\144"]) || ($_SESSION["\x72\x6f\x6c\145"] ?? '') !== "\x61\x64\x6d\151\x6e") { require APP_PATH . "\x2f\166\151\145\x77\163\57\x6d\x61\151\156\164\145\x6e\x61\x6e\x63\x65\x2e\160\x68\160"; die; } } goto ObdxI; FosDg: if (file_exists(CONFIG_PATH . "\57\144\141\164\x61\142\141\x73\x65\x2e\160\x68\160")) { require_once CONFIG_PATH . "\57\x64\x61\x74\x61\x62\141\163\x65\x2e\x70\x68\160"; } goto EdeH3; bJsSD: switch ($route) { case "\x73\x65\x74\x75\160": require APP_PATH . "\57\x76\151\145\167\163\57\x73\145\x74\x75\x70\x2e\x70\x68\x70"; break; case "\150\157\x6d\145": require APP_PATH . "\x2f\166\151\145\x77\163\x2f\150\x6f\x6d\x65\56\160\150\160"; break; case "\154\157\147\x69\156": require APP_PATH . "\57\166\151\145\x77\163\57\x6c\x6f\x67\151\x6e\56\160\x68\160"; break; case "\x72\x65\x67\x69\163\164\x65\162": require APP_PATH . "\x2f\x76\151\x65\167\163\x2f\162\145\x67\x69\x73\164\145\x72\56\160\x68\160"; break; case "\143\150\141\x74": require APP_PATH . "\x2f\x76\x69\x65\x77\163\57\x63\150\x61\x74\x2e\160\150\160"; break; case "\x61\144\x6d\x69\156": if (($_SESSION["\162\157\x6c\145"] ?? '') !== "\141\x64\155\x69\156") { header("\x4c\157\143\141\x74\x69\157\x6e\72\40\x3f\162\x6f\x75\x74\145\x3d\143\x68\x61\164"); die; } require APP_PATH . "\57\166\x69\x65\167\163\57\141\x64\155\151\x6e\x2e\x70\x68\160"; break; case "\x70\162\157\x66\151\x6c\x65": require APP_PATH . "\x2f\x76\x69\x65\x77\x73\x2f\x70\x72\157\x66\151\154\x65\56\160\150\160"; break; case "\x6c\157\147\x6f\165\x74": session_destroy(); setcookie(session_name(), '', time() - 3600, "\57"); header("\114\x6f\143\x61\164\x69\x6f\x6e\72\x20\x3f\162\x6f\x75\x74\x65\75\x68\x6f\x6d\x65"); die; default: header("\x4c\157\x63\x61\x74\151\x6f\156\x3a\x20\77\162\x6f\165\164\145\x3d\x68\157\155\145"); die; }
+/**
+ * FireWeb Messenger - Ultimate Edition (Premium UI v0.0.2)
+ * PWA-Ready with Correct Routing & Fixed Setup
+ * 
+ * @author Alion (@prgpu / @Learn_launch)
+ * @license MIT
+ */
+
+// Favicon
+echo '<link rel="icon" href="assets/images/icon-96.png" type="image/png">' . PHP_EOL;
+
+// Configuration
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+
+// Session configuration (before session_start)
+ini_set('session.cookie_httponly', 1);
+ini_set('session.cookie_secure', 0); // Set to 1 in production with HTTPS
+ini_set('session.cookie_samesite', 'Lax');
+ini_set('session.use_strict_mode', 1);
+ini_set('session.gc_maxlifetime', 86400); // 24 hours
+
+session_start();
+
+// Define paths
+define('BASE_PATH', __DIR__);
+define('CONFIG_PATH', BASE_PATH . '/config');
+define('APP_PATH', BASE_PATH . '/app');
+define('STORAGE_PATH', BASE_PATH . '/storage');
+define('ASSETS_PATH', BASE_PATH . '/assets');
+define('PUBLIC_PATH', BASE_PATH . '/public');
+
+// Check installation
+$setupLockFile = CONFIG_PATH . '/setup.lock';
+$isInstalled = file_exists($setupLockFile);
+
+if (!$isInstalled && (!isset($_GET['route']) || $_GET['route'] !== 'setup')) {
+    header('Location: ?route=setup');
+    exit;
+}
+
+// Auto-load classes
+spl_autoload_register(function ($class) {
+    $paths = [
+        APP_PATH . '/controllers/' . $class . '.php',
+        APP_PATH . '/models/' . $class . '.php',
+        CONFIG_PATH . '/' . $class . '.php'
+    ];
+    
+    foreach ($paths as $path) {
+        if (file_exists($path)) {
+            require_once $path;
+            return true;
+        }
+    }
+    return false;
+});
+
+// ✅ FIX: Load database.php ALWAYS (needed for setup too)
+if (file_exists(CONFIG_PATH . '/database.php')) {
+    require_once CONFIG_PATH . '/database.php';
+}
+
+// Load configuration
+if ($isInstalled) {
+    if (file_exists(CONFIG_PATH . '/app.php')) {
+        $config = require CONFIG_PATH . '/app.php';
+    }
+}
+
+// Get route
+$route = $_GET['route'] ?? null;
+
+// Default route based on authentication status
+if ($route === null) {
+    if ($isInstalled) {
+        if (isset($_SESSION['user_id'])) {
+            $route = 'chat';
+        }
+        else {
+            $route = 'home';
+        }
+    } else {
+        $route = 'setup';
+    }
+}
+
+// ✅ FIXED: Special routes with correct file paths
+if ($route === 'manifest') {
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: public, max-age=604800');
+    $manifestPath = BASE_PATH . '/manifest.json';
+    if (file_exists($manifestPath)) {
+        readfile($manifestPath);
+    } else {
+        http_response_code(404);
+        echo json_encode(['error' => 'Manifest not found']);
+    }
+    exit;
+}
+
+if ($route === 'sw') {
+    header('Content-Type: application/javascript; charset=utf-8');
+    header('Cache-Control: no-cache, no-store, must-revalidate');
+    header('Service-Worker-Allowed: /FireWebCHAT/');
+    $swPath = BASE_PATH . '/service-worker.js';
+    if (file_exists($swPath)) {
+        readfile($swPath);
+    } else {
+        http_response_code(404);
+        echo 'console.error("Service worker not found");';
+    }
+    exit;
+}
+
+// Maintenance mode check
+if (isset($config['maintenance_mode']) && $config['maintenance_mode'] === true) {
+    if (!isset($_SESSION['user_id']) || ($_SESSION['role'] ?? '') !== 'admin') {
+        require APP_PATH . '/views/maintenance.php';
+        exit;
+    }
+}
+
+// Route handling
+$allowedRoutes = ['setup', 'home', 'login', 'register', 'chat', 'admin', 'logout', 'profile'];
+
+if (!in_array($route, $allowedRoutes)) {
+    $route = 'home';
+}
+
+// Authentication check
+$publicRoutes = ['setup', 'home', 'login', 'register'];
+$requiresAuth = !in_array($route, $publicRoutes);
+
+if ($requiresAuth && !isset($_SESSION['user_id'])) {
+    header('Location: ?route=login');
+    exit;
+}
+
+// Redirect authenticated users from auth pages
+if (in_array($route, ['login', 'register']) && isset($_SESSION['user_id'])) {
+    header('Location: ?route=chat');
+    exit;
+}
+
+// Route to view
+switch ($route) {
+    case 'setup':
+        require APP_PATH . '/views/setup.php';
+        break;
+        
+    case 'home':
+        require APP_PATH . '/views/home.php';
+        break;
+        
+    case 'login':
+        require APP_PATH . '/views/login.php';
+        break;
+        
+    case 'register':
+        require APP_PATH . '/views/register.php';
+        break;
+        
+    case 'chat':
+        require APP_PATH . '/views/chat.php';
+        break;
+        
+    case 'admin':
+        if (($_SESSION['role'] ?? '') !== 'admin') {
+            header('Location: ?route=chat');
+            exit;
+        }
+        require APP_PATH . '/views/admin.php';
+        break;
+        
+    case 'profile':
+        require APP_PATH . '/views/profile.php';
+        break;
+        
+    case 'logout':
+        session_destroy();
+        setcookie(session_name(), '', time() - 3600, '/');
+        header('Location: ?route=home');
+        exit;
+        
+    default:
+        header('Location: ?route=home');
+        exit;
+}
