@@ -151,7 +151,7 @@ git clone https://github.com/PRGPU/FireWebCHAT.git
 
 ## 📄 مجوز
 
-**مجوز MIT** — © ۱۴۰۳ علیون ([@PRGPU](https://github.com/PRGPU) / [@Learn_Launch](https://github.com/Learn_Launch))
+**مجوز MIT** — © ۱۴۰۳ آلیون ([@PRGPU](https://github.com/PRGPU) / [@Learn_Launch](https://github.com/Learn_Launch))
 
 ---
 
