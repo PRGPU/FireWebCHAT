@@ -115,7 +115,7 @@ git clone https://github.com/PRGPU/FireWebCHAT.git
 <div align="center">
 <img src="assets/images/screenshot-1.png" width="46%"/>
 &nbsp;&nbsp;
-<img src="assets/images/screenshot-2.png" width="46%"/>
+<img src="assets/images/screenshot-2.png?v=2" width="46%"/>
 </div>
 
 <br/>
