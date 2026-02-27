@@ -1,6 +1,6 @@
 <?php
 /**
- * FireWeb Messenger - Ultimate Edition (Premium UI v0.0.2)
+ * FireWeb Messenger - Ultimate Edition (Premium UI v1.0.0)
  * PWA-Ready with Correct Routing & Fixed Setup
  * 
  * @author Alion (@prgpu / @Learn_launch)

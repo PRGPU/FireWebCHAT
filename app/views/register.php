@@ -1,6 +1,6 @@
 <?php
 /**
- * FireWeb Messenger - Registration Page (Premium UI v0.0.1)
+ * FireWeb Messenger - Registration Page (Premium UI v1.0.0)
  * 
  * @author Alion (@prgpu / @Learn_launch)
  * @license MIT

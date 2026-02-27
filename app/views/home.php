@@ -1,6 +1,6 @@
 <?php
 /**
- * FireWeb Messenger - Premium Bilingual Home (Premium UI v0.0.1)
+ * FireWeb Messenger - Premium Bilingual Home (Premium UI v1.0.0)
  * 
  * @author Alion (@prgpu / @Learn_launch)
  * @license MIT
