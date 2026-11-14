@@ -39,11 +39,27 @@ spl_autoload_register(function ($class) {
 // File serving
 
 if (isset($_GET['file'])) {
+    // Require authentication before serving any stored file
+    if (!isset($_SESSION['user_id'])) {
+        http_response_code(401);
+        exit(json_encode(['error' => 'Unauthorized']));
+    }
+
     $file        = STORAGE_PATH . '/' . $_GET['file'];
     $realPath    = realpath($file);
     $storagePath = realpath(STORAGE_PATH);
 
-    if ($realPath && $storagePath && strpos($realPath, $storagePath) === 0 && file_exists($realPath)) {
+    // Restrict serving to user-media subdirectories only (never app.db, logs, config, backups)
+    $allowedDirs = ['uploads', 'voices', 'avatars'];
+    $relTop      = '';
+    if ($realPath && $storagePath && strpos($realPath, $storagePath) === 0) {
+        $relative = ltrim(substr($realPath, strlen($storagePath)), DIRECTORY_SEPARATOR);
+        $parts    = explode(DIRECTORY_SEPARATOR, $relative);
+        $relTop   = $parts[0] ?? '';
+    }
+
+    if ($realPath && $storagePath && strpos($realPath, $storagePath) === 0
+        && in_array($relTop, $allowedDirs, true) && is_file($realPath)) {
         $ext = strtolower(pathinfo($realPath, PATHINFO_EXTENSION));
 
         $mimeMap = [
